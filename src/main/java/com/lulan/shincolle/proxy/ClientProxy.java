@@ -89,7 +89,7 @@ public class ClientProxy extends CommonProxy
 	public void registerRender() throws Exception
 	{
 		//取代mc原本的tesr item renderer, 改為自訂的renderer
-		TileEntityItemStackRenderer.instance = new RenderTileEntityItem();
+		TileEntityItemStackRenderer.instance = new RenderTileEntityItem(TileEntityItemStackRenderer.instance);
 		
 		//custom item entity render
 		RenderingRegistry.registerEntityRenderingHandler(BasicEntityItem.class, RenderBasicEntityItem.FACTORY);
